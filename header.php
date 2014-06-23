@@ -4,6 +4,7 @@
 		<title><?php wp_title('&laguo;', true, 'right')?><?php bloginfo('name');?></title>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
