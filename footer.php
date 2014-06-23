@@ -1,11 +1,21 @@
-			</section>
-			<footer>
-		  		<div class="col-md-12">apa</div>
-			</footer>
-		</div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="wp-content/themes/morganceken/js/bootstrap.js"></script>
-  </body>
+												<div class="hide-on-phones">
+							<?php get_search_form(); ?>
+						</div><!-- .hide-on-phones -->
+			</div>
+		</section>
+		<footer id="top-footer">
+			<div class="container">
+			text
+			</div>
+		</footer>
+		<footer id="bottom-footer">
+			<div class="container">
+			text
+			</div>		
+		</footer>		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="<?php bloginfo('template_url')?>/js/bootstrap.js"></script>
+	</body>
 </html>
