@@ -15,8 +15,8 @@
 	<div class="row">
 				<?php while ( have_posts() ) : the_post() ?>	
 				
-					<article class="col-xs-6 col-md-4">
-						<a href="<?php echo get_permalink(); ?>">
+					<article class="col-md-4">
+						<a href="<?php the_title(); ?>">
 							<h2><?php the_title(); ?></h2>
 						</a>					
 						<?php

@@ -3,6 +3,7 @@ $alignCenter: 0px auto;
 $stdBg: #000000;
 $paddingLR: 15px 0 0 15px;
 $stdPadding: 30px;
+$stdBorder:	1px solid #ccc;
 
 #header, #content, #top-footer, #bottom-footer{
 	margin: $alignCenter;
@@ -16,8 +17,7 @@ $stdPadding: 30px;
 }
 
 #header {
-	margin-bottom: $stdPadding;
-	> div {
+	> .container {
 		background: url(http://morganceken.se/morganceken-com/wp-content/uploads/2014/02/elegantboy.jpg);
 		background-position: right top;
 		height: 350px;
@@ -27,11 +27,12 @@ $stdPadding: 30px;
 		font-family: 'Raleway', sans-serif;
 		font-weight: bolder;
 		font-size: 58px;
-		text-transform: uppercase;	
+		margin: 0;
 		max-width: 540px;	
+		text-transform: uppercase;	
 		width: 100%;
 	}
-	h2 {
+	p {
 		font-size: 24px;
 		color: #222222;
 		max-width: 540px;	
@@ -45,13 +46,17 @@ $stdPadding: 30px;
 			margin-bottom: $stdPadding;
 			position: relative;			
 			a{
+				h2{
+					margin: 0;
+				}		
 				background: $stdBg;
 				bottom: 0;
 				display: block;
 				height: 100%;
 				zoom: 1;	
 				opacity: 0;				
-				filter: alpha(opacity=0);				
+				filter: alpha(opacity=0);	
+				padding: 15px;				
 				position: absolute;
 				top: 0;	
 				transition: 0.5s;				
@@ -61,6 +66,7 @@ $stdPadding: 30px;
 				width: calc(100% - 30px);				
 			}	
 			img{
+				border: $stdBorder;
 				float: left;
 				width: 100%;
 				z-index: 1;
@@ -80,7 +86,7 @@ $stdPadding: 30px;
 }
 
 #top-footer {
-	background: #252525;
+	background: #333;
 	border-top: 5px solid #000;
 	height: 300px;
 	width: 100%;
@@ -90,4 +96,59 @@ $stdPadding: 30px;
 	background: $stdBg;
 	padding: 15px;
 	width: 100%;
+}
+
+.breadcrumb {
+	border: 1px solid #e5e5e5;
+}
+
+#searchform {
+	background: -moz-linear-gradient(top, #ffd73a, #ffa500);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd73a), to(#ffa500));
+	border: 1px solid #d28703;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: inset 0 1px #ffff90, inset 0 -2px 5px #ffd05d, 0 0 0 4px rgba(255,255,255,0.65);
+	-webkit-box-shadow: inset 0 1px #ffff90, inset 0 -2px 5px #ffd05d, 0 0 0 4px rgba(255,255,255,0.65);
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+#searchform .wrapper {
+background: #fff;
+border: 1px solid #d28703;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 1px #ff0;
+-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 1px #ff0;
+height: 50px;
+padding-left: 10px;
+position: relative;
+}
+
+#searchform input, #searchform input:focus {
+border: none;
+color: #333;
+outline: none;
+font: bold 24px Helvetica, Arial, sans-serif;
+margin: 12px 0;
+width: 100%;
+}
+
+#searchform button {
+background: -moz-linear-gradient(top, #453e26, #000);
+background: -webkit-gradient(linear, 0 0, 0 100%, from(#453e26), to(#000));
+border: 1px solid #000;
+-moz-border-radius: 2px;
+-webkit-border-radius: 2px;
+-moz-box-shadow: inset 0 -2px 3px #193544, inset 0 1px #907817, 0 1px 1px rgba(0,0,0,1);
+-webkit-box-shadow: inset 0 -2px 3px #193544, inset 0 1px #907817, 0 1px 1px rgba(0,0,0,.1);
+cursor: pointer;
+height: 45px;
+position: absolute;
+right: 2px;
+top: 2px;
+width: 45px;
 }

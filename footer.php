@@ -1,6 +1,4 @@
-												<div class="hide-on-phones">
-							<?php get_search_form(); ?>
-						</div><!-- .hide-on-phones -->
+
 			</div>
 		</section>
 		<footer id="top-footer">

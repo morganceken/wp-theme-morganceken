@@ -7,25 +7,24 @@
   max-width: 980px;
   width: 100%; }
 
-#header {
-  margin-bottom: 30px; }
-  #header > div {
-    background: url(http://morganceken.se/morganceken-com/wp-content/uploads/2014/02/elegantboy.jpg);
-    background-position: right top;
-    height: 350px;
-    margin-top: 20px; }
-  #header h1 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: bolder;
-    font-size: 58px;
-    text-transform: uppercase;
-    max-width: 540px;
-    width: 100%; }
-  #header h2 {
-    font-size: 24px;
-    color: #222222;
-    max-width: 540px;
-    width: 100%; }
+#header > .container {
+  background: url(http://morganceken.se/morganceken-com/wp-content/uploads/2014/02/elegantboy.jpg);
+  background-position: right top;
+  height: 350px;
+  margin-top: 20px; }
+#header h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
+  font-size: 58px;
+  margin: 0;
+  max-width: 540px;
+  text-transform: uppercase;
+  width: 100%; }
+#header p {
+  font-size: 24px;
+  color: #222222;
+  max-width: 540px;
+  width: 100%; }
 
 .home #content article {
   margin-bottom: 30px;
@@ -38,6 +37,7 @@
     zoom: 1;
     opacity: 0;
     filter: alpha(opacity=0);
+    padding: 15px;
     position: absolute;
     top: 0;
     transition: 0.5s;
@@ -45,7 +45,10 @@
     width: -moz-calc(100% - 30px);
     width: -webkit-calc(100% -30px);
     width: calc(100% - 30px); }
+    .home #content article a h2 {
+      margin: 0; }
   .home #content article img {
+    border: 1px solid #cccccc;
     float: left;
     width: 100%;
     z-index: 1; }
@@ -59,7 +62,7 @@
     zoom: 1; }
 
 #top-footer {
-  background: #252525;
+  background: #333;
   border-top: 5px solid #000;
   height: 300px;
   width: 100%; }
@@ -68,3 +71,53 @@
   background: black;
   padding: 15px;
   width: 100%; }
+
+.breadcrumb {
+  border: 1px solid #e5e5e5; }
+
+#searchform {
+  background: -moz-linear-gradient(top, #ffd73a, orange);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd73a), to(orange));
+  border: 1px solid #d28703;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-shadow: inset 0 1px #ffff90, inset 0 -2px 5px #ffd05d, 0 0 0 4px rgba(255, 255, 255, 0.65);
+  -webkit-box-shadow: inset 0 1px #ffff90, inset 0 -2px 5px #ffd05d, 0 0 0 4px rgba(255, 255, 255, 0.65);
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 10px; }
+
+#searchform .wrapper {
+  background: #fff;
+  border: 1px solid #d28703;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px yellow;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px yellow;
+  height: 50px;
+  padding-left: 10px;
+  position: relative; }
+
+#searchform input, #searchform input:focus {
+  border: none;
+  color: #333;
+  outline: none;
+  font: bold 24px Helvetica, Arial, sans-serif;
+  margin: 12px 0;
+  width: 100%; }
+
+#searchform button {
+  background: -moz-linear-gradient(top, #453e26, black);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#453e26), to(black));
+  border: 1px solid #000;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-box-shadow: inset 0 -2px 3px #193544, inset 0 1px #907817, 0 1px 1px black;
+  -webkit-box-shadow: inset 0 -2px 3px #193544, inset 0 1px #907817, 0 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  height: 45px;
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 45px; }
