@@ -15,8 +15,8 @@
 	<div class="row">
 				<?php while ( have_posts() ) : the_post() ?>	
 				
-					<article class="col-md-4">
-						<a href="<?php the_title(); ?>">
+					<article class="col-md-4 col-xs-12 col-sm-6">
+						<a href="<?php echo get_permalink(); ?>">
 							<h2><?php the_title(); ?></h2>
 						</a>					
 						<?php
@@ -26,10 +26,14 @@
 						the_post_thumbnail();
 						}
 						else {
-						echo '<img src="http://morganceken.se/morganceken-com/wp-content/uploads/2014/02/h2h-300x200.jpg" />';
+						echo '<img src="http://localhost/wordpress/wp-content/uploads/2014/07/mc-header2.jpg" />';
 						}
 						?>
 					</article>	
 				<?php endwhile; ?>		
-</div>				
+	</div>				
+	<!-- Add the pagination functions here. -->
+
+<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 <?php get_footer()?>

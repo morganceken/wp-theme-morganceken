@@ -12,6 +12,12 @@ nav.nav {
 	position: relative;
 	zoom: 1;
 }
+
+.navbar {
+border: 0px;
+border-radius: 0px;
+}
+
 .nav ul li:hover > ul,
 #branding li:hover > ul {
 	display: block;
@@ -35,6 +41,7 @@ nav.nav {
 }
 #branding {
 	background: #000;	
+	margin-bottom: 0px;
 	position: relative;
 }
 
@@ -382,3 +389,124 @@ a.menu:after,
 .dropdown > a .sub-menu {
 	display: block;
 }
+
+.navbar-toggle {
+border: 2px solid transparent;
+}
+
+.navbar-default .navbar-toggle {
+border-color: #fff;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover {
+background-color: orange !important;
+}
+
+.navbar-default .navbar-toggle:focus {
+background-color: #000;
+}
+
+.pointer {
+cursor: pointer;
+}
+
+.collapsed, .navbar-header > a {
+	margin: 0;
+}
+
+@media (max-width: 767px) {
+
+	#branding .navbar-header {
+		display: block !important;
+	}
+
+	#branding div > ul {
+		width: 100%;
+	}
+
+	.sub-menu, #branding .children {
+		min-width: 0px;
+		max-width: none;	
+		padding: 0;
+		position: relative;
+		width: 100%;
+	}
+	
+	.apa {color: orange !important;}
+	
+	#branding div > ul .sub-menu, #branding div > ul .children {
+		border: 0px;
+		margin-top: 0px;
+	}	
+	
+	.sub-menu, #branding .children {
+		position: relative;
+	}	
+	
+	#branding div > ul {
+		float: left;
+	}	
+	#branding ul .sub-menu li, #branding ul .children li {
+		padding: 0px;
+	}		
+	#branding ul .sub-menu li a, #branding ul .children li a {
+		padding: 0px;
+	}	
+	
+	#branding div > ul .sub-menu li a, #branding div > ul .children li a {
+		padding: 15px;
+	}	
+	
+	#branding div > ul > li {
+		width: 100%;
+	}
+	
+	.navbar-collapse {
+		max-height: none;
+	}	
+
+	#branding .navbar-header {
+		vertical-align: top;
+	}
+	
+	.navbar-toggle {
+		margin: 0;
+	}	
+	
+	#branding a > span{
+		display: inline-block !important;
+		font-size: 28px;
+	}
+	
+	#branding a {
+		color: #fff;
+		cursor: pointer;
+		display: block;
+		float: left;
+		padding-bottom: 15px;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 15px;
+		width: 100%;
+	}
+	
+	.nav ul li:hover > ul, #branding li:hover > ul {
+		display: none;
+	}
+	
+	.visible {
+		display: block !important;
+	}	
+
+	.container > .navbar-header {
+		display: block !important;
+		margin: 0;
+	}
+	
+}
+
+

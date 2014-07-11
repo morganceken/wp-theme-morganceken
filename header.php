@@ -10,33 +10,53 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600,500,300,200,100' rel='stylesheet' type='text/css'>
 		<!-- Bootstrap -->
 		<link href="<?php bloginfo('template_url')?>/css/bootstrap.css" type="text/css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url')?>" rel="stylesheet">
+		<!--[if lt IE 10]>
+			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/style-ie9.css" />
+		<![endif]-->			
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url')?>" rel="stylesheet">	
 		<link type="text/css" href="<?php bloginfo('template_url')?>/css/menu.css" rel="stylesheet">
 	</head>
 	<body <?php body_class(); ?>>
 		<header id="header">
-			<div class="container">
-				<h1>
-					<?php bloginfo( 'name' ); ?>
-				</h1>
-			<?php if ( '' != get_bloginfo( 'description' ) ) : ?>
-				<p>
+			<div class="container">		
+				<div id="header-description" class="col-md-6 col-sm-6">
+					<h1 >
+						<?php bloginfo( 'name' ); ?>
+					</h1>														
+					<?php if ( '' != get_bloginfo( 'description' ) ) : ?>
+					<p>
 					<?php bloginfo( 'description' ); ?>
-				</p>
-			<?php endif; ?>			
-			</div>	
+					</p>
+					<?php endif; ?>														
+				</div>
+				<div id="header-img" class="col-md-6 col-sm-6">
+					<img src="http://localhost/wordpress/wp-content/uploads/2014/07/mc-header2.jpg">
+				</div>			
+			</div>			
+  <!-- Add content to the popup -->
+  <div id="my_popup">
+
+    ...popup content...
+
+    <!-- Add an optional button to close the popup -->
+    <button class="my_popup_close">Close</button>
+
+  </div>			
 			<nav  id="branding" class="navbar navbar-default" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<figure>
+						<a data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="visible-xs">MENY</span>
+							<button type="button" class="navbar-toggle" >
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</a>
+						<figure class="visible-sm visible-md visible-lg">
 							<a href="<?php echo home_url(); ?>" title="Till startsidan">
-								<img src="http://morganceken.se/morganceken-com/wp-content/uploads/2014/02/logo.png" alt="Logotype">
+								<img src="http://localhost/wordpress/wp-content/uploads/2014/07/mc-logo.png" alt="Logotype">
 							</a>
 						</figure>
 					</div>
