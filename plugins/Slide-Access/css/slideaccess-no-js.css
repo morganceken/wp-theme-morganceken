@@ -1,0 +1,51 @@
+#slideaccess{
+	max-width: 940px;
+} 
+
+#slideaccess-ctrls{
+	display:none;
+} 
+
+#slideaccess ul li {
+    position: relative;	
+}
+
+#slideaccess img {
+    position: relative;	
+}
+
+#slideaccess li:not(:first-of-type) {
+    opacity: 0;
+	position: absolute;	
+}
+
+#slideaccess-counter{
+	display:none;
+} 
+
+#slideaccess ul li div{
+	color: #ffffff;
+	font-family: arial;
+	font-size: 16px;
+	padding: 15px;
+	background: #000000;
+	opacity: 1;
+	max-height: inherit;
+}
+
+#slideaccess ul li div h1{
+	font-size: 28px;
+}
+
+#slideaccess ul li div  a{
+	color: #0080dd;
+}
+
+@media only screen and (max-width: 768px) {
+#slideaccess ul li {
+    overflow: inherit;	
+}
+
+#slideaccess ul li div{
+    position: relative;	
+} 

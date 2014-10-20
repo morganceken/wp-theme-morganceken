@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	$("#menu-test > li").each(function () {
+	$("#branding > li").each(function () {
 		console.log($(this).attr('href'))
 		if($(this).children().attr('href') == undefined) {
 			$(this).children().addClass("pointer")

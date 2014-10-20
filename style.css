@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
   color: #454545;
   line-height: 150%; }
@@ -6,23 +5,6 @@ body {
 p {
   font-size: 16px;
   margin-bottom: 21.33333px; }
-=======
-/*
-Theme Name: Yoko
-Theme URI: http://www.elmastudio.de/wordpress-themes/yoko/
-Description: Yoko is a modern three-column blog theme. A responsive layout optimizes the theme for mobile devices like tablet pcs and modern smartphones (the layout switches to a two- or one-column layout depending on the screen size the theme is viewed on). To make your blog post more flexible you can use different kinds of post formats such as gallery, image, video, aside, link or quotes. To customize the theme you can choose your own background, link color, logo and header image. Yoko also comes with a custom social links widget and shortcodes for text columns, info boxes and highlighted text.
-
-Author: Elmastudio
-Author URI: http://www.elmastudio.de/wordpress-themes/
-Version: 1.0.5
-Tags: light, three-columns, right-sidebar, flexible-width, custom-colors, custom-header, custom-background, custom-menu, theme-options, threaded-comments, sticky-post, translation-ready
-
-License: GNU/GPL Version 2 or later
-License URI: http://www.gnu.org/licenses/gpl.html
-*/
-body {
-  color: #454545; }
->>>>>>> FETCH_HEAD
 
 #header, #content, #top-footer, #bottom-footer {
   margin: 0px auto;
@@ -33,7 +15,6 @@ body {
   max-width: 1000px;
   width: 100%; }
 
-<<<<<<< HEAD
 #header {
   margin-top: 60px; }
   #header > .container {
@@ -41,42 +22,46 @@ body {
   #header #header-img img {
     vertical-align: bottom;
     width: 100%; }
-  #header #header-description {
+  #header .morning {
+    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(#cfeeff), to(white));
+    background-position: bottom;
+    background-repeat: repeat-x; }
+    #header .morning h1 {
+      color: #454545 !important;
+      text-shadow: 0 0px 0 #979797; }
+    #header .morning p {
+      color: #454545 !important;
+      text-shadow: 0 0px 0 #979797; }
+  #header .day {
+    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(#91d8ff), to(white));
+    background-position: bottom;
+    background-repeat: repeat-x; }
+    #header .day h1 {
+      color: #454545 !important;
+      text-shadow: 0 0px 0 #979797; }
+    #header .day p {
+      color: #454545 !important;
+      text-shadow: 0 0px 0 #979797; }
+  #header .evening {
+    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(#001c63), to(#db9e00));
+    background-position: bottom;
+    background-repeat: repeat-x; }
+    #header .evening h1 {
+      color: #fff !important;
+      text-shadow: 0 1px 0 black; }
+    #header .evening p {
+      color: #fff !important;
+      text-shadow: 0 1px 0 black; }
+  #header .night {
     background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(black), to(#587eca));
     background-position: bottom;
     background-repeat: repeat-x; }
-    #header #header-description #header-island {
-      height: 368px; }
-    #header #header-description h1 {
-      font-family: 'Raleway', sans-serif;
-      font-weight: normal;
-      font-size: 42px;
-      margin: 0;
-      text-transform: uppercase;
-      width: 45%;
-      color: white;
-      margin-top: 30px;
-      margin-bottom: 15px;
+    #header .night h1 {
+      color: #fff !important;
       text-shadow: 0 1px 0 black; }
-    #header #header-description p {
-      color: white;
-      font-family: 'Raleway', sans-serif;
-      font-size: 22px;
-      line-height: 150%;
-      text-shadow: 0 1px 0 black;
-      width: 46%; }
-  #header nav {
-    border: 0px; }
-=======
-#header > .container {
-  margin-top: 20px; }
-#header #header-img img {
-  vertical-align: bottom;
-  width: 100%; }
-#header #header-description {
-  background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(black), to(#587eca));
-  background-position: bottom;
-  background-repeat: repeat-x; }
+    #header .night p {
+      color: #fff !important;
+      text-shadow: 0 1px 0 black; }
   #header #header-description #header-island {
     height: 368px; }
   #header #header-description h1 {
@@ -85,52 +70,33 @@ body {
     font-size: 42px;
     margin: 0;
     text-transform: uppercase;
-    width: 45%;
-    color: white;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    text-shadow: 0 1px 0 black; }
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px; }
   #header #header-description p {
     font-family: 'Raleway', sans-serif;
     font-size: 22px;
-    color: white;
-    width: 45%;
     line-height: 150%;
-    text-shadow: 0 1px 0 black; }
-#header nav {
-  border: 0px; }
->>>>>>> FETCH_HEAD
+    width: 100%; }
+  #header nav {
+    border: 0px; }
 
 #content {
   background: #fff; }
   #content main {
-<<<<<<< HEAD
-    border-right: 2px solid #e5e5e5;
-=======
-    border-right: 2px solid #f8f8f8;
->>>>>>> FETCH_HEAD
-    padding-right: 30px;
-    padding-top: 30px; }
+    padding-top: 30px;
+    padding-right: 30px; }
   #content article {
     background: #fff;
     border: 0px solid #ddd;
-<<<<<<< HEAD
     border-bottom: 2px solid #e5e5e5;
     border-bottom-width: 0px;
     border-top: 0;
     margin-bottom: 30px;
     padding: 0px;
-    padding-bottom: 15px;
-    padding-left: 80px; }
+    padding-bottom: 15px; }
     #content article img {
       border-radius: 8px; }
-=======
-    border-bottom: 0;
-    border-top: 0;
-    margin-bottom: 30px;
-    padding: 0px;
-    padding-left: 80px; }
->>>>>>> FETCH_HEAD
     #content article #content-text {
       background: #faf9f7;
       border: 2px solid #e5e5e5;
@@ -140,8 +106,8 @@ body {
       padding-right: 40px;
       margin-bottom: 30px; }
       #content article #content-text #content-tags {
-        margin-bottom: 20px;
-        margin-top: 20px; }
+        margin-bottom: 30px;
+        margin-top: 30px; }
         #content article #content-text #content-tags a {
           background: #f39c12;
           border: 2px solid #f39c12;
@@ -171,15 +137,49 @@ body {
       margin-bottom: 20px;
       max-width: 100%; }
     #content article .sm-thumbnail {
-      position: absolute;
+      position: relative;
       left: 0;
       top: 0; }
       #content article .sm-thumbnail img {
-        border-radius: 60px;
+        border-radius: 8px;
         height: 60px;
         margin-bottom: 0px;
         margin-right: 15px;
         width: 60px; }
+  #content .pagination {
+    float: right; }
+    #content .pagination .active {
+      z-index: 2;
+      color: #fff;
+      cursor: default;
+      background-color: #428bca;
+      border-color: #428bca; }
+
+#sidebar {
+  border-left: 2px solid #f5f5f5;
+  padding-left: 30px;
+  padding-right: 0;
+  padding: 15px;
+  padding-top: 30px; }
+  #sidebar > div {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px; }
+  #sidebar h3 {
+    font-family: Georgia;
+    margin-top: 0; }
+  #sidebar img {
+    border-radius: 8px; }
+  #sidebar ul {
+    padding: 0;
+    padding-left: 15px;
+    width: 100%; }
+    #sidebar ul li {
+      list-style: square;
+      margin-bottom: 10px;
+      width: 100%; }
+  #sidebar img {
+    max-width: 100%; }
 
 #top-footer {
   background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/footer/footer-bg.jpg"), #6f6250 top center;
@@ -289,47 +289,3 @@ iframe {
   height: 7000px;
   overflow: hidden;
   width: 100%; }
-
-#sidebar {
-  padding-left: 30px;
-  padding-right: 0;
-<<<<<<< HEAD
-  padding-top: 60px; }
-  #sidebar h3 {
-    margin-top: 0; }
-  #sidebar img {
-    border-radius: 8px; }
-  #sidebar ul {
-    padding: 0;
-    padding-left: 15px;
-    width: 100%; }
-    #sidebar ul li {
-      margin-bottom: 10px;
-      width: 100%; }
-=======
-  padding-top: 70px; }
-  #sidebar h3 {
-    margin-top: 0; }
-  #sidebar #related-posts ul {
-    padding: 0;
-    width: 100%; }
-    #sidebar #related-posts ul li {
-      list-style-type: none;
-      margin-bottom: 5px;
-      width: 100%; }
-      #sidebar #related-posts ul li a {
-        border: 2px solid #e5e5e5;
-        display: block;
-        padding: 15px;
-        width: 100%; }
-        #sidebar #related-posts ul li a img {
-          margin-right: 7.5px;
-          width: 100%; }
->>>>>>> FETCH_HEAD
-
-.pagination .active {
-  z-index: 2;
-  color: #fff;
-  cursor: default;
-  background-color: #428bca;
-  border-color: #428bca; }
