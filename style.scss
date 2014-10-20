@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $stdWidth: 1000px;
 $alignCenter: 0px auto;
 $stdBg: #000000;
@@ -343,4 +344,361 @@ iframe {
 	cursor: default;
 	background-color: #428bca;
 	border-color: #428bca;
+=======
+/*
+Theme Name: Yoko
+Theme URI: http://www.elmastudio.de/wordpress-themes/yoko/
+Description: Yoko is a modern three-column blog theme. A responsive layout optimizes the theme for mobile devices like tablet pcs and modern smartphones (the layout switches to a two- or one-column layout depending on the screen size the theme is viewed on). To make your blog post more flexible you can use different kinds of post formats such as gallery, image, video, aside, link or quotes. To customize the theme you can choose your own background, link color, logo and header image. Yoko also comes with a custom social links widget and shortcodes for text columns, info boxes and highlighted text.
+
+Author: Elmastudio
+Author URI: http://www.elmastudio.de/wordpress-themes/
+Version: 1.0.5
+Tags: light, three-columns, right-sidebar, flexible-width, custom-colors, custom-header, custom-background, custom-menu, theme-options, threaded-comments, sticky-post, translation-ready
+
+License: GNU/GPL Version 2 or later
+License URI: http://www.gnu.org/licenses/gpl.html
+*/
+
+$stdWidth: 980px;
+$alignCenter: 0px auto;
+$stdBg: #000000;
+$footerBg: #333;
+$paddingLR: 15px 0 0 15px;
+$stdPadding: 30px;
+$stdBorder:	2px solid #e5e5e5;
+$headerPadding: 500px;
+
+body{
+	color: #454545;
+}
+
+#header, #content, #top-footer, #bottom-footer{
+	margin: $alignCenter;
+	padding: 0;
+	width: 100%;
+}
+
+.container{
+	max-width: $stdWidth;
+	width: 100%;
+}
+
+#header {
+	> .container {
+		margin-top: 20px;
+	}
+	
+	#header-img {
+		img {
+			vertical-align: bottom;
+			width: 100%;
+		}
+	}
+	
+	#header-description {
+		background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png'), -webkit-gradient(linear, left top, left bottom, from(#000000), to(#587eca));;
+		background-position: bottom;
+		background-repeat: repeat-x;
+
+
+		#header-island {
+			height: 368px;
+		}
+		
+		h1 {
+			font-family: 'Raleway', sans-serif;
+			font-weight: normal;
+			font-size: 42px;
+			margin: 0;
+			text-transform: uppercase;
+			width: 45%;
+			color: white;
+			margin-top: 30px;
+			margin-bottom: 15px;
+			text-shadow: 0 1px 0 rgba(0,0,0,1.0);
+		}
+		p {
+			font-family: 'Raleway', sans-serif;
+			font-size: 22px;
+			color: white;
+			width: 45%;
+			line-height: 150%;
+			text-shadow: 0 1px 0 rgba(0,0,0,1.0);
+		}
+	}
+	
+	nav {
+		border: 0px;
+	}		
+}
+
+#content{
+	background: #fff;
+	main{		
+		border-right: 2px solid #f8f8f8;
+		padding-right: $stdPadding;
+		padding-top: $stdPadding;
+	}	
+	article{
+		background: #fff;
+		border: 0px solid #ddd;
+		border-bottom: 0;
+		border-top: 0;
+		margin-bottom: $stdPadding;
+		padding: 0px;
+		padding-left: 80px;
+	
+		#content-text{
+			background: #faf9f7;
+			border: 2px solid #e5e5e5;
+			border-radius: 0px;
+			padding: 10px;
+			padding-left: 40px;
+			padding-right: 40px;
+			margin-bottom: 30px;
+				
+			#content-tags{
+				margin-bottom: 20px;
+				margin-top: 20px;
+				a{		
+					background: #f39c12;	
+					border: 2px solid #f39c12;	
+					border-radius: 5px;
+					color: #ffffff;					
+					padding: 3px;
+					padding-left: 7px;
+					padding-right: 7px;
+				}
+			}
+		
+		}
+		
+		> header {
+			background-color: #fff;
+			border-bottom: 0px solid #e9e9e9;
+			padding: 0;
+			padding-bottom: 0px;
+
+			h2 {
+				color: #454545;
+				font-family: Georgia;
+				margin-bottom: 10px;
+				margin-top: 0;
+			}
+			
+			p {
+				color: #999;
+				font-family: Georgia;	
+				font-size: 16px;
+				font-style: italic;
+				text-shadow: 0px 0px 0 #ccc;				
+			}			
+		}		
+		
+		img{	
+			border: 2px solid #e5e5e5;
+			margin-bottom: 20px;
+			max-width: 100%;
+		}
+		
+		.sm-thumbnail{
+			position: absolute;
+			left:0;
+			top: 0;
+			
+			img{
+				border-radius: 60px;
+				height: 60px;
+				margin-bottom: 0px;
+				margin-right: $stdPadding / 2;
+				width: 60px;
+			}	
+		}		
+	
+		h2{
+			
+		}	
+		
+	}
+}	
+
+
+#top-footer {
+	background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/footer/footer-bg.jpg'), #6f6250 top center ;
+	background-repeat: repeat-x;
+	border-top: 0px solid #000;
+	padding-bottom: $stdPadding;	
+	padding-top: 240px;
+	text-transform: uppercase;
+	width: 100%;
+	
+	h3 {
+		color: #fff;
+		font-size: 30px;
+		margin: 0px auto;
+		margin-left: $stdPadding / 2;
+		margin-right: $stdPadding / 2;
+		text-align: center;
+		text-transform: none;
+	}	
+	
+	p {
+		color: #fff;
+		font-size: 14px;
+		margin: 0px auto;
+		text-align: center;
+		text-transform: uppercase;
+	}		
+	
+	.icon-box {
+		border: 0px solid #ccc;
+		border-radius: 15px;
+		color: #fff;
+		cursor: pointer;		
+		font-weight: bold;
+		margin-top: $stdPadding;		
+		text-align: center;
+		text-decoration: none;
+		
+		> img {
+			border: 35px solid #383128;
+			border-radius: 70px;
+			max-width: 100%;
+			margin-bottom: $stdPadding / 2;
+			transition: 0.2s;	
+			width: 100%;
+		}			
+	}	
+	.icon-box:hover {
+		> img {
+			border: 35px solid #262626;
+			transition: 0.2s;	
+		}	
+	}	
+}
+
+#bottom-footer {
+	background: $stdBg;
+	padding: 15px;
+	width: 100%;
+	
+	div:last-child	{
+		text-align: right;
+	}	
+		
+	div:first-child	{
+		text-align: left;
+	}
+
+	p {
+		margin: 0;
+	}	
+}
+
+.breadcrumb {
+	border: 1px solid #e5e5e5;
+}
+
+#searchform {
+	background: -moz-linear-gradient(top, #ffd73a, #ffa500);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd73a), to(#ffa500));
+	border: 1px solid #d28703;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: inset 0 1px #ffff90, inset 0 -2px 5px #ffd05d, 0 0 0 4px rgba(255,255,255,0.65);
+	-webkit-box-shadow: inset 0 1px #ffff90, inset 0 -2px 5px #ffd05d, 0 0 0 4px rgba(255,255,255,0.65);
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+#searchform .wrapper {
+	background: #fff;
+	border: 1px solid #d28703;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 1px #ff0;
+	-webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.3), 0 1px #ff0;
+	height: 50px;
+	padding-left: 10px;
+	position: relative;
+}
+
+#searchform input, #searchform input:focus {
+	border: none;
+	color: #333;
+	outline: none;
+	font: bold 24px Arial, sans-serif;
+	margin: 12px 0;
+	width: 100%;
+}
+
+#searchform button {
+	background: -moz-linear-gradient(top, #453e26, #000);
+	background: -webkit-gradient(linear, 0 0, 0 100%, from(#453e26), to(#000));
+	border: 1px solid #000;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-box-shadow: inset 0 -2px 3px #193544, inset 0 1px #907817, 0 1px 1px rgba(0,0,0,1);
+	-webkit-box-shadow: inset 0 -2px 3px #193544, inset 0 1px #907817, 0 1px 1px rgba(0,0,0,.1);
+	cursor: pointer;
+	height: 45px;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+	width: 45px;
+}
+
+iframe {
+	border: none; 
+	height: 7000px;
+	overflow: hidden;
+	width: 100%;
+
+}
+
+#sidebar {
+	padding-left: $stdPadding;
+	padding-right: 0;
+	padding-top: $stdPadding * 2 + 10;
+	
+	h3 {
+		margin-top: 0;
+	}	
+	
+	#related-posts {
+	
+		ul{
+			padding: 0;
+			width: 100%;
+			
+			li{
+				list-style-type: none;
+				margin-bottom: 5px;
+				width: 100%;
+				
+				a {		
+					border: $stdBorder;
+					display: block;
+					padding: 15px;
+					width: 100%;
+					
+					img {		
+						margin-right: $stdPadding / 4;
+						width: 100%;
+					}				
+				}		
+			}	
+		}
+	}
+}
+
+.pagination .active {
+	z-index: 2;
+	color: #fff;
+	cursor: default;
+	background-color: #428bca;
+	border-color: #428bca;
+>>>>>>> FETCH_HEAD
 }
