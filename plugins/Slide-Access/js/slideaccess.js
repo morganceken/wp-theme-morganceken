@@ -2,8 +2,21 @@ $(document).ready(function () {
 	if ($("#sidebar").outerHeight() > $("main").outerHeight() ) {
 		$("#sidebar").css("height", $("main").outerHeight());
 	}
+	
+a = 357;
+b = 357;
+
+setInterval(function() {
+    	$('#header-description').animate({
+		'background-position-x': a+'px',
+		'background-position-y': 'bottom'
+		}, 500, 'linear');
+    	a = a + 10
+}, 1500);
 
     (function ($) {
+    
+
 
         $.fn.slideaccess = function (options) {		
 
