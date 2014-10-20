@@ -10,30 +10,51 @@
  *
  * @package morganceken
  */
+ $a = $_GET['cat'];
 ?>
-<?php get_header()?>
-	<div class="row">
-				<?php while ( have_posts() ) : the_post() ?>	
-				
-					<article class="col-md-4 col-xs-12 col-sm-6">
-						<a href="<?php echo get_permalink(); ?>">
-							<h2><?php the_title(); ?></h2>
-						</a>					
-						<?php
-						// Must be inside a loop.
 
-						if ( has_post_thumbnail() ) {
-						the_post_thumbnail();
-						}
-						else {
-						echo '<img src="http://localhost/wordpress/wp-content/uploads/2014/07/mc-header2.jpg" />';
-						}
-						?>
-					</article>	
-				<?php endwhile; ?>		
-	</div>				
+<?php get_header()?>
+	
+	<main class="col-md-9">
+	<?php if ($a): ?>
+		<?php while (have_posts()) : the_post(); ?>	
+			<article class="col-md-12 col-xs-9 col-sm-9" id="blog-socialmedia">
+				<header>
+					<h2><?php the_title(); ?></h2>
+				</header>
+				<div>
+					<?php if ( has_post_thumbnail() ) {
+					the_post_thumbnail('thumbnail');
+					}
+					else {
+					echo '<img src="http://localhost/wordpress/wp-content/uploads/2014/07/mc-header2.jpg" />';
+					} ?>
+				</div>
+			</article>					
+			<?php endwhile; ?>		
+	<?php else: ?>
+
+		<?php while (have_posts()) : the_post(); ?>	
+			<article class="col-md-12 col-xs-12 col-sm-12" id="blog-socialmedia">
+				<div class="sm-thumbnail">
+					<img src="http://localhost/wordpress/wp-content/uploads/2014/07/instagram.gif" class="pull-left"/>
+				</div>
+				<header>
+					<h2><?php the_title(); ?></h2>
+					<p>Posted  on October 13 by</p>
+				</header>
+				<div>
+					<img style="width: 100%;" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/606/overrides/tern-chick-sri-lanka_60642_990x742.jpg">
+					<?php the_content(); ?>
+				</div>
+			</article>			
+		<?php endwhile; ?>
+	<?php endif ?>
+	</main>
+		<?php get_sidebar()?>		
+	
 	<!-- Add the pagination functions here. -->
 
-<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+<?php wpex_pagination(); ?>
+
 <?php get_footer()?>

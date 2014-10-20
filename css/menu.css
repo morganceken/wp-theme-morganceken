@@ -40,9 +40,12 @@ border-radius: 0px;
 	opacity: 0.5;
 }
 #branding {
-	background: #000;	
+	background: #fff;	
 	margin-bottom: 0px;
-	position: relative;
+	position: fixed;
+	top:0;
+	z-index: 100;
+	width: 100%;
 }
 
 #branding .navbar-header {
@@ -63,8 +66,7 @@ border-radius: 0px;
 }
 
 #branding a {
-	color: #bfbfbf;
-	text-shadow: 0 -1px 0 rgba( 0, 0, 0, 0.25 );
+	color: #606060;
 	word-break: break-word;
 }
 #branding h1 a:hover,
@@ -196,16 +198,17 @@ border-radius: 0px;
 	list-style-type: none;
 }
 #branding ul > li > a {
-	color: #fff;
+	color: #606060;
 	display: block;
 	float: none;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 20px;
 	padding-left: 15px;	
 	padding-right: 15px;
 	padding-bottom: 20px;
 	padding-top: 20px;	
 	text-decoration: none;
+	text-transform: uppercase;
 }
 
 #branding div > ul a:hover {
@@ -237,7 +240,7 @@ border-radius: 0px;
 #branding div > ul .sub-menu,
 #branding div > ul .children {
 	background-color: #333;
-	border: 2px solid #000;
+	border: 2px solid #606060;
 	margin-top: -4px;
 }
 #branding div > ul .sub-menu li,
@@ -262,15 +265,14 @@ border-radius: 0px;
 #branding div > ul .sub-menu li a,
 #branding div > ul .children li a {
 	color: #fff;
-	text-shadow: 0 1px 0 rgba( 0, 0, 0, 0.5 );
 }
 #branding div > ul .sub-menu li a:hover,
 #branding div > ul .children li a:hover {
-	background-color: #000;
+	background-color: #606060;
 	background-repeat: repeat-x;
-	background-image: 0 to( #000 ) );
-	background-image: 0 color-stop( 100%, #000 ) );
-	background-image: linear-gradient( top, #292929, #000 );
+	background-image: 0 to( #606060 ) );
+	background-image: 0 color-stop( 100%, #606060 ) );
+	background-image: linear-gradient( top, #292929, #606060 );
 	color: orange;
 }
 #branding div > ul .sub-menu .active a,
@@ -360,7 +362,6 @@ a.menu:after,
 	font-weight: normal;
 	line-height: 18px;
 	color: #808080;
-	text-shadow: 0 1px 0 #fff;
 }
 #branding .sub-menu a:hover,
 .sub-menu a:hover,
@@ -407,7 +408,7 @@ background-color: orange !important;
 }
 
 .navbar-default .navbar-toggle:focus {
-background-color: #000;
+background-color: #606060;
 }
 
 .pointer {
