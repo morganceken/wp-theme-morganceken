@@ -17,7 +17,7 @@
 		<link type="text/css" href="<?php bloginfo('template_url')?>/css/menu.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/plugins/Slide-Access/css/slideaccess.css">
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="<?php bloginfo('template_url')?>/plugins/Slide-Access/js/slideaccess.js"></script>		
+		<script src="<?php bloginfo('template_url')?>/plugins/Slide-Access/js/slideaccess.js"></script>				
 	</head>
 	<body <?php body_class(); ?>>
 		<nav  id="branding" class="navbar navbar-default" role="navigation">
@@ -58,7 +58,7 @@
 						<!-- END Slider Controls -->
 						<ul>
 							<!-- Slide 1 -->
-							<li class="morning" style="background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/morning.png') top right no-repeat;">
+							<li class="island-morning">
 								<div>
 										<h1 >
 											<?php bloginfo( 'name' ); ?>
@@ -73,8 +73,7 @@
 							<!-- END Slide 1 -->
 							
 							<!-- Slide 2 -->
-							<li class="day" style="background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/day.png') top right no-repeat;">
-								<img src="" alt="">
+							<li class="island-day">
 								<div>
 										<h1>
 											<?php bloginfo( 'name' ); ?>
@@ -88,8 +87,7 @@
 							</li>
 							<!-- END Slide 2 -->
 							<!-- Slide 3 -->
-							<li class="evening" style="background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/evening.png') top right no-repeat;">
-								<img src="" alt="">
+							<li class="island-evening">
 								<div>
 										<h1>
 											<?php bloginfo( 'name' ); ?>
@@ -103,8 +101,7 @@
 							</li>
 							<!-- END Slide 3 -->								
 							<!-- Slide 4 -->
-							<li class="night" style="background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/night.png') top right no-repeat;">
-								<img src="" alt="">
+							<li class="island-night">
 								<div>
 										<h1>
 											<?php bloginfo( 'name' ); ?>

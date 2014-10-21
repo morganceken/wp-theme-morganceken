@@ -30,6 +30,22 @@ p{
 	width: 100%;
 }
 
+.island-morning {
+	background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/morning.png') top right no-repeat; background-size: 590px 430px;
+}
+
+.island-day {
+	background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/day.png') top right no-repeat; background-size: 590px 430px;
+}
+
+.island-evening {
+	background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/evening.png') top right no-repeat; background-size: 590px 430px;
+}
+
+.island-night {
+	background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/night.png') top right no-repeat; background-size: 590px 430px;
+}
+
 #header {
 	margin-top: 60px;
 	> .container {
@@ -44,36 +60,36 @@ p{
 	}
 	
 	.morning {	
-		background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png'), -webkit-gradient(linear, left top, left bottom, from(#CFEEFF), to(#ffffff));
-		background-position: bottom;
+		background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-morning.jpg"), #cfeeff;
+		background-position: 0px bottom;
 		background-repeat: repeat-x;
 		h1 {
-			color: #454545 !important;
+			color: #000 !important;
 			text-shadow: 0 0px 0 #979797;
 		}
 		p {
-			color: #454545 !important;
+			color: #000 !important;
 			text-shadow: 0 0px 0 #979797;
 		}		
 	}
 	
 	.day {	
-		background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png'), -webkit-gradient(linear, left top, left bottom, from(#91D8FF), to(#ffffff));
-		background-position: bottom;
+		background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-day.jpg"), #8bd6ff;
+		background-position: 0px bottom;
 		background-repeat: repeat-x;
 		h1 {
-			color: #454545 !important;
+			color: #000 !important;
 			text-shadow: 0 0px 0 #979797;
 		}
 		p {
-			color: #454545 !important;
+			color: #000 !important;
 			text-shadow: 0 0px 0 #979797;
 		}		
 	}
 
 	.evening {	
-		background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png'), -webkit-gradient(linear, left top, left bottom, from(rgb(0, 28, 99)), to(#DB9E00));;
-		background-position: bottom;
+		background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-evening.jpg"), #003668;	
+		background-position: 0px bottom;
 		background-repeat: repeat-x;
 		h1 {
 			color: #fff !important;
@@ -86,8 +102,8 @@ p{
 	}	
 	
 	.night {	
-		background: url('http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png'), -webkit-gradient(linear, left top, left bottom, from(#000000), to(#587eca));
-		background-position: bottom;
+		background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-night.jpg"), #000000;	
+		background-position: 0px bottom;
 		background-repeat: repeat-x;
 		h1 {
 			color: #fff !important;
@@ -134,7 +150,6 @@ p{
 		padding-right: $stdPadding;
 	}	
 	article{
-		background: #fff;
 		border: 0px solid #ddd;
 		border-bottom: $stdBorder;
 		border-bottom-width: 0px;
@@ -145,31 +160,6 @@ p{
 		
 		img{
 			border-radius: $stdImgBorderRadius;
-		}
-	
-		#content-text{
-			background: #faf9f7;
-			border: 2px solid #e5e5e5;
-			border-radius: 0px;
-			padding: 10px;
-			padding-left: 40px;
-			padding-right: 40px;
-			margin-bottom: 30px;
-				
-			#content-tags{
-				margin-bottom: $stdPadding;
-				margin-top: $stdPadding;
-				a{		
-					background: #f39c12;	
-					border: 2px solid #f39c12;	
-					border-radius: 5px;
-					color: #ffffff;					
-					padding: 3px;
-					padding-left: 7px;
-					padding-right: 7px;
-				}
-			}
-		
 		}
 		
 		> header {
@@ -235,7 +225,6 @@ p{
 	padding-top: $stdPadding;
 	
 	> div {
-		background: #fff;
 		border-radius: 5px;
 		padding: 15px;
 	}

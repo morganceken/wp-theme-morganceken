@@ -15,6 +15,22 @@ p {
   max-width: 1000px;
   width: 100%; }
 
+.island-morning {
+  background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/morning.png") top right no-repeat;
+  background-size: 590px 430px; }
+
+.island-day {
+  background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/day.png") top right no-repeat;
+  background-size: 590px 430px; }
+
+.island-evening {
+  background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/evening.png") top right no-repeat;
+  background-size: 590px 430px; }
+
+.island-night {
+  background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/night.png") top right no-repeat;
+  background-size: 590px 430px; }
+
 #header {
   margin-top: 60px; }
   #header > .container {
@@ -23,28 +39,28 @@ p {
     vertical-align: bottom;
     width: 100%; }
   #header .morning {
-    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(#cfeeff), to(white));
-    background-position: bottom;
+    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-morning.jpg"), #cfeeff;
+    background-position: 0px bottom;
     background-repeat: repeat-x; }
     #header .morning h1 {
-      color: #454545 !important;
+      color: #000 !important;
       text-shadow: 0 0px 0 #979797; }
     #header .morning p {
-      color: #454545 !important;
+      color: #000 !important;
       text-shadow: 0 0px 0 #979797; }
   #header .day {
-    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(#91d8ff), to(white));
-    background-position: bottom;
+    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-day.jpg"), #8bd6ff;
+    background-position: 0px bottom;
     background-repeat: repeat-x; }
     #header .day h1 {
-      color: #454545 !important;
+      color: #000 !important;
       text-shadow: 0 0px 0 #979797; }
     #header .day p {
-      color: #454545 !important;
+      color: #000 !important;
       text-shadow: 0 0px 0 #979797; }
   #header .evening {
-    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(#001c63), to(#db9e00));
-    background-position: bottom;
+    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-evening.jpg"), #003668;
+    background-position: 0px bottom;
     background-repeat: repeat-x; }
     #header .evening h1 {
       color: #fff !important;
@@ -53,8 +69,8 @@ p {
       color: #fff !important;
       text-shadow: 0 1px 0 black; }
   #header .night {
-    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-bg.png"), -webkit-gradient(linear, left top, left bottom, from(black), to(#587eca));
-    background-position: bottom;
+    background: url("http://localhost/wordpress/wp-content/themes/wp-theme-morganceken/img/header/waves-night.jpg"), black;
+    background-position: 0px bottom;
     background-repeat: repeat-x; }
     #header .night h1 {
       color: #fff !important;
@@ -87,7 +103,6 @@ p {
     padding-top: 30px;
     padding-right: 30px; }
   #content article {
-    background: #fff;
     border: 0px solid #ddd;
     border-bottom: 2px solid #e5e5e5;
     border-bottom-width: 0px;
@@ -97,25 +112,6 @@ p {
     padding-bottom: 15px; }
     #content article img {
       border-radius: 8px; }
-    #content article #content-text {
-      background: #faf9f7;
-      border: 2px solid #e5e5e5;
-      border-radius: 0px;
-      padding: 10px;
-      padding-left: 40px;
-      padding-right: 40px;
-      margin-bottom: 30px; }
-      #content article #content-text #content-tags {
-        margin-bottom: 30px;
-        margin-top: 30px; }
-        #content article #content-text #content-tags a {
-          background: #f39c12;
-          border: 2px solid #f39c12;
-          border-radius: 5px;
-          color: #ffffff;
-          padding: 3px;
-          padding-left: 7px;
-          padding-right: 7px; }
     #content article > header {
       background-color: #fff;
       border-bottom: 0px solid #e9e9e9;
@@ -162,7 +158,6 @@ p {
   padding: 15px;
   padding-top: 30px; }
   #sidebar > div {
-    background: #fff;
     border-radius: 5px;
     padding: 15px; }
   #sidebar h3 {

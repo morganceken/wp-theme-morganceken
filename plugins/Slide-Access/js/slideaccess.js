@@ -1,22 +1,6 @@
 $(document).ready(function () {
-	if ($("#sidebar").outerHeight() > $("main").outerHeight() ) {
-		$("#sidebar").css("height", $("main").outerHeight());
-	}
-	
-a = 357;
-b = 357;
-
-setInterval(function() {
-    	$('#header-description').animate({
-		'background-position-x': a+'px',
-		'background-position-y': 'bottom'
-		}, 500, 'linear');
-    	a = a + 10
-}, 1500);
 
     (function ($) {
-    
-
 
         $.fn.slideaccess = function (options) {		
 
@@ -31,7 +15,6 @@ setInterval(function() {
             var sAccCounter = $("#slideaccess-counter")
             var sAccCounterCur = $("#slideaccess-counter-current")
             var sAccCounterTot = $("#slideaccess-counter-total")
-            var sAccImg = $("#slideaccess img")
             var sAccTextArea = $("#slideaccess ul li div")
             var sAccTextAreaH = $("#slideaccess ul li div h1")
             var sAccTextAreaP = $("#slideaccess ul li div p")
@@ -105,15 +88,11 @@ setInterval(function() {
                 sAccTextArea.css({ "background-color": "rgba(" + rgb2hex(options.slideaccess_textarea_bg) + "," + options.slideaccess_textarea_opacity })
                 sAccTextArea.css({ "padding": options.slideaccess_textarea_padding })
                 sAccTextArea.css({ "width": options.slideaccess_textarea_width })
-                sAccTextArea.css({ "height": sAccImg.height() - options.slideaccess_textarea_padding * 2 })
+                sAccTextArea.css({ "height": options.slideaccess_textarea_padding * 2 })
                 sAccTextAreaH.css({ "color": options.slideaccess_font_color, "font-size": options.slideaccess_header_size + "px" })
                 sAccTextAreaP.css({ "color": options.slideaccess_font_color, "font-size": options.slideaccess_font_size + "px" })
                 sAccTextAreaA.css({ "color": options.slideaccess_a_color, "font-size": options.slideaccess_font_size + "px" })
-                sAccImg.each(function () {
-                    $(this).css("max-height", options.slideaccess_height);
-                    $(this).css("max-width", options.slideaccess_img_width);
-                });
-                sAcc.css("height", getLowestImg());
+                sAcc.css("height", options.slideaccess_height);
                 sAccCtrls.css('width', sAcc.width() - sAccTextArea.outerWidth());
 				changeBG()
             };
@@ -131,92 +110,6 @@ setInterval(function() {
                     height: $window.height()
                 };
 
-                // Scale up
-                if (newDimensions.width > previousDimensions.width) {
-
-                    var maxHeight = options.slideaccess_height;    // Max height for the image
-
-                    var highestImage = 999999999999999999;
-                    sAccImg.each(function () {
-                        $(this).css("max-height", "");
-                        if ($(this).height() < highestImage) {
-                            highestImage = $(this).height();
-                        }
-                    });
-
-                    sAccImg.each(function () {
-                        $(this).css("max-height", getLowestImg());
-                    });
-
-                    if (sAccContent.height() == maxHeight) {
-                        sAccImg.css("width", "100%");
-                        sAccImg.css("height", "");
-                        sAccImg.css("max-height", maxHeight);
-                    }
-
-                    else {
-
-                        if (newDimensions.width < options.slideaccess_width) {
-
-                            sAcc.css("height", sAccImg.height());
-                            sAccContent.css("height", sAccImg.height());
-                            sAccTextArea.css({ "height": sAccImg.height() - options.slideaccess_textarea_padding * 2 })
-                        }
-                    }
-                    sAccCtrls.css('width', sAcc.width() - sAccTextArea.outerWidth());
-
-                    if (sAcc.width() == options.slideaccess_width) {
-                        sAcc.css("height", options.slideaccess_height)
-                        sAccContent.css("height", options.slideaccess_height)
-                    };
-
-                }
-
-                    // Scale down
-                else if (newDimensions.width < options.slideaccess_width) {
-
-                    sAccContent.each(function () {
-                        var maxWidth = options.slideaccess_width; // Max width for the image
-                        var maxHeight = options.slideaccess_height;    // Max height for the image
-                        var ratio = 0;  // Used for aspect ratio
-                        var width = sAccImg.width();    // Current image width
-                        var height = sAccImg.height();  // Current image height
-
-
-                        // Check if the current width is larger than the max
-                        if (width > maxWidth) {
-                            ratio = maxWidth / width;   // get ratio for scaling image
-                            sAccImg.css("width", maxWidth); // Set new width
-                            sAccImg.css("height", height * ratio);  // Scale height based on ratio
-                            height = height * ratio;    // Reset height to match scaled image
-                            width = width * ratio;    // Reset width to match scaled image
-                        }
-
-                        // Check if current height is larger than max
-                        if (height > maxHeight) {
-                            ratio = maxHeight / height; // get ratio for scaling image
-                            sAccImg.css("height", maxHeight);   // Set new height
-                            sAccImg.css("width", width * ratio);    // Scale width based on ratio
-                            width = width * ratio;    // Reset width to match scaled image
-                        }
-
-                        if (sAccContent.height() == maxHeight) {
-                            sAccImg.css("width", "100%");
-                            sAccImg.css("height", "");
-                        }
-
-                        sAccImg.each(function () {
-                            $(this).css("max-height", getLowestImg());
-                        });
-
-                        sAcc.css("height", sAccImg.height());
-                        sAccContent.css("height", sAccImg.height());
-                        sAccCtrls.css('width', sAcc.width() - sAccTextArea.outerWidth());
-                        sAccTextArea.css({ "height": sAccImg.height() - options.slideaccess_textarea_padding * 2 })
-
-                    });
-
-                }
 
                 // Store the new dimensions
                 previousDimensions = newDimensions;
@@ -230,28 +123,6 @@ setInterval(function() {
                 sAccPlayBtn.addClass('hidden');
                 sAccPauseBtn.removeClass('hidden');
             };
-
-            /* Get lowest image height function */
-            function getLowestImg() {
-                var ImgHeight = 999999999999999999;
-                sAccImg.each(function () {
-                    if ($(this).height() < ImgHeight) {
-                        ImgHeight = $(this).height();
-                    }
-                });
-                return ImgHeight;
-            }
-
-            /* Get height image height function */
-            function getHighestImg() {
-                var ImgHeight = 0;
-                sAccImg.each(function () {
-                    if ($(this).height() > ImgHeight) {
-                        ImgHeight = $(this).height();
-                    }
-                });
-                return ImgHeight;
-            }
 
             /* Get heighest text area height function */
             function getHighestTextArea() {
@@ -355,8 +226,6 @@ setInterval(function() {
             function noJs() {
 
                 sAccContent.css("position", "absolute").css("height", "100%").css("display", "block")
-                sAccImg.css("position", "absolute")
-                sAccImg.css("position", "absolute")
                 sAccCtrls.css("display", "block")
                 sAccCounter.css("display", "block")
 
@@ -365,24 +234,8 @@ setInterval(function() {
             /* CSS for tablets and smartphones */
             function maxWidth768() {
 
-                if ($(window).width() < 769) {
-
-                    var stdSlideAccHeight = sAcc.height();
-                    sAccCtrls.css("top", sAcc.height() / 2)
-                    sAcc.css("height", sAcc.height() + getHighestTextArea())
-                    sAccContent.css("height", sAcc.height())
-                    sAccTextArea.css({ "background-color": options.slideaccess_textarea_bg })
-                    sAcc.css("height", getHighestTextArea() + stdSlideAccHeight)
-                    sAccContent.css("height", getHighestTextArea() + stdSlideAccHeight)
-                }
-                else {
-                    sAccCtrls.css("top", "")
-                    sAccCtrls.css("margin-top", "")
-                    sAccTextArea.css({ "top": "" })
-                    sAccTextArea.css({ "background-color": "rgba(" + rgb2hex(options.slideaccess_textarea_bg) + "," + options.slideaccess_textarea_opacity })
-                };
-
             }
+			
             var c = slideCurrent + 1
 
             /* Previous slide function */
@@ -429,19 +282,19 @@ setInterval(function() {
             function changeBG() {
 				c2 = c - 1;
                 console.log(c2);
-				if (sAccContent.eq(c2).hasClass("morning") == true ) {
+				if (sAccContent.eq(c2).hasClass("island-morning") == true ) {
 					$("#header-description").removeClass();
 					$("#header-description").addClass('morning');	
 				}
-				else if (sAccContent.eq(c2).hasClass("day") == true ) {
+				else if (sAccContent.eq(c2).hasClass("island-day") == true ) {
 					$("#header-description").removeClass();
 					$("#header-description").addClass('day');	
 				}
-				else if (sAccContent.eq(c2).hasClass("evening") == true ) {
+				else if (sAccContent.eq(c2).hasClass("island-evening") == true ) {
 					$("#header-description").removeClass();
 					$("#header-description").addClass('evening');	
 				}
-				else if (sAccContent.eq(c2).hasClass("night") == true ) {
+				else if (sAccContent.eq(c2).hasClass("island-night") == true ) {
 					$("#header-description").removeClass();
 					$("#header-description").addClass('night');	
 				}				
@@ -456,7 +309,7 @@ setInterval(function() {
     $.fn.slideaccess({
         'slideaccess_duration': 10000,	// Slideshow speed.
         'slideaccess_width': 1000,	// Slideshow width (px).
-        'slideaccess_height': 368,	// Slideshow height (px).
+        'slideaccess_height': 430,	// Slideshow height (px).
         'slideaccess_img_width': 0,	// Slideshow width (px).
         'slideaccess_fade_speed': 300,	// Slideshow fade speed (px).
         'slideaccess_start_slide': 'random',	// Slideshow start node. 1 is default. 'random' generates random slide.
@@ -470,5 +323,4 @@ setInterval(function() {
         'slideaccess_header_size': 42,	// Slideshow header size (px).
         'slideaccess_a_color': '#0080dd',	// Slideshow <a> color.
     });
-
 });

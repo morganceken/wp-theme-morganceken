@@ -27,7 +27,7 @@
 /* slideaccess text area */
 
 #slideaccess ul li div {
-    background-color: #000000;
+    background-color: none !important;
 	position: absolute;
 	top: 0;
 	left: 0;
