@@ -284,3 +284,10 @@ iframe {
   height: 7000px;
   overflow: hidden;
   width: 100%; }
+
+#twitter-widget-0 {
+  width: 100% !important; }
+
+.timeline-header {
+  display: none !important;
+  visibility: hidden !important; }

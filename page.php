@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Page Sidebar
+*/
 /**
  * The main template file.
  *
@@ -11,16 +14,19 @@
  * @package morganceken
  */
 ?>
-<?php get_header()?>
-	<div class="row">
-				<?php while ( have_posts() ) : the_post() ?>	
-				
-					<article class="col-md-12">
-						<a href="<?php the_title(); ?>">
-							<h2><?php the_title(); ?></h2>
-						</a>					
-						<?php the_content(); ?>
-					</article>	
-				<?php endwhile; ?>		
-	</div>				
+<?php get_header()?>				
+	<main class="col-md-8">
+	<?php while ( have_posts() ) : the_post() ?>	
+		<article class="col-md-12 col-xs-12 col-sm-12" id="blog-socialmedia">
+			<header>
+				<h2><?php the_title(); ?></h2>
+			</header>
+			<div>
+				<?php the_content(); ?>
+			</div>
+		</article>			
+	<?php endwhile; ?>		
+	</main>	
+	<?php get_sidebar()?>	
+					
 <?php get_footer()?>

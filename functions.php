@@ -49,9 +49,6 @@ function the_breadcrumb() {
     elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
 
 }
-?>
-
-<?php
 
 add_action( 'after_setup_theme', 'morganceken_theme_setup' );
 
