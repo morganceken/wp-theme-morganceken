@@ -1,3 +1,55 @@
+/*
+Theme Name: Twenty Twelve
+Theme URI: http://wordpress.org/themes/twentytwelve
+Author: the WordPress team
+Author URI: http://wordpress.org/
+Description: The 2012 theme for WordPress is a fully responsive theme that looks great on any device. Features include a front page template with its own widgets, an optional display font, styling for post formats on both index and single views, and an optional no-sidebar page template. Make it yours with a custom menu, header image, and background.
+Version: 1.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: light, gray, white, one-column, two-columns, right-sidebar, fluid-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Text Domain: twentytwelve
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* =Notes
+--------------------------------------------------------------
+This stylesheet uses rem values with a pixel fallback. The rem
+values (and line heights) are calculated using two variables:
+
+$rembase:     14;
+$line-height: 24;
+
+---------- Examples
+
+* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
+	padding: 5px 0;
+	padding: 0.357142857rem 0; (5 / $rembase)
+
+* Set a font-size and then set a line-height based on the font-size
+	font-size: 16px
+	font-size: 1.142857143rem; (16 / $rembase)
+	line-height: 1.5; ($line-height / 16)
+
+---------- Vertical spacing
+
+Vertical spacing between most elements should use 24px or 48px
+to maintain vertical rhythm:
+
+.my-new-div {
+	margin: 24px 0;
+	margin: 1.714285714rem 0; ( 24 / $rembase )
+}
+
+---------- Further reading
+
+http://snook.ca/archives/html_and_css/font-size-with-rem
+http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+
+
+/* =Reset
+-------------------------------------------------------------- */
 body {
   color: #454545;
   line-height: 150%; }
@@ -98,9 +150,16 @@ p {
     border: 0px; }
 
 #content {
-  background: #fff; }
+  background: #fff;
+  height: 100%; }
+  #content #content-tbl {
+    display: table;
+    height: 100%; }
+  #content #content-tbl-row {
+    display: table-row; }
   #content main {
-    padding-top: 30px;
+    display: table-cell;
+    height: 100%;
     padding-right: 30px; }
   #content article {
     border: 0px solid #ddd;
@@ -109,7 +168,8 @@ p {
     border-top: 0;
     margin-bottom: 30px;
     padding: 0px;
-    padding-bottom: 15px; }
+    padding-bottom: 15px;
+    padding-top: 30px; }
     #content article img {
       border-radius: 8px; }
     #content article > header {
@@ -153,6 +213,8 @@ p {
 
 #sidebar {
   border-left: 2px solid #f5f5f5;
+  display: table-cell;
+  height: 100%;
   padding-left: 30px;
   padding-right: 0;
   padding: 15px;

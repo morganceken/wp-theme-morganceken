@@ -281,7 +281,6 @@ $(document).ready(function () {
 			
             function changeBG() {
 				c2 = c - 1;
-                console.log(c2);
 				if (sAccContent.eq(c2).hasClass("island-morning") == true ) {
 					$("#header-description").removeClass();
 					$("#header-description").addClass('morning');	
@@ -296,7 +295,7 @@ $(document).ready(function () {
 				}
 				else if (sAccContent.eq(c2).hasClass("island-night") == true ) {
 					$("#header-description").removeClass();
-					$("#header-description").addClass('night');	
+					$("#header-descriptiojjn").addClass('night');	
 				}				
             }			
 

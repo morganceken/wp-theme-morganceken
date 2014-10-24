@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url')?>" rel="stylesheet">	
 		<link type="text/css" href="<?php bloginfo('template_url')?>/css/menu.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/plugins/Slide-Access/css/slideaccess.css">
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="<?php bloginfo('template_url')?>/plugins/Slide-Access/js/jquery-1.11.1.min.js"></script>
 		<script src="<?php bloginfo('template_url')?>/plugins/Slide-Access/js/slideaccess.js"></script>				
 	</head>
 	<body <?php body_class(); ?>>
@@ -121,6 +121,6 @@
 			</div>	
 		</header>
 		<section id="content">
+		<?php the_breadcrumb(); ?>	
 			<div class="row">
-				<div class="container">
-					<?php the_breadcrumb(); ?>		
+				<div id="content-tbl" class="container">
