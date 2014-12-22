@@ -121,6 +121,5 @@
 			</div>	
 		</header>
 		<section id="content">
-		<?php the_breadcrumb(); ?>	
-			<div class="row">
-				<div id="content-tbl" class="container">
+			<?php the_breadcrumb(); ?>	
+			<div class="container">

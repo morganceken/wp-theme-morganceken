@@ -50,13 +50,31 @@ http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
 
 /* =Reset
 -------------------------------------------------------------- */
+html {
+  overflow-y: scroll; }
+
 body {
+  background: #fff;
   color: #454545;
+  font-family: Arial;
   line-height: 150%; }
 
+h2 {
+  color: #454545;
+  font-family: Georgia;
+  font-size: 36px;
+  margin-bottom: 10px;
+  margin-top: 0; }
+
 p {
-  font-size: 16px;
-  margin-bottom: 21.33333px; }
+  color: #454545;
+  font-family: Georgia;
+  font-size: 18px;
+  line-height: 150%;
+  margin-bottom: 24px; }
+
+img {
+  max-width: 100%; }
 
 #header, #content, #top-footer, #bottom-footer {
   margin: 0px auto;
@@ -150,58 +168,67 @@ p {
     border: 0px; }
 
 #content {
-  background: #fff;
-  height: 100%; }
-  #content #content-tbl {
-    display: table;
-    height: 100%; }
-  #content #content-tbl-row {
-    display: table-row; }
-  #content main {
-    display: table-cell;
-    height: 100%;
-    padding-right: 30px; }
-  #content article {
-    border: 0px solid #ddd;
+  height: 100%;
+  margin-bottom: 0;
+  margin-top: 0; }
+  #content > .container {
+    display: table; }
+  #content #breadcrumb-container {
+    background-color: #f5f5f5;
     border-bottom: 2px solid #e5e5e5;
-    border-bottom-width: 0px;
-    border-top: 0;
-    margin-bottom: 30px;
+    border-top: 2px solid #0093df;
+    border-radius: 0;
+    margin-bottom: 0px; }
+    #content #breadcrumb-container .breadcrumb {
+      border-bottom: 0px;
+      border-radius: 0;
+      margin-bottom: 0px; }
+  #content main {
+    background: #fff;
+    display: table-cell;
+    float: none;
+    padding-right: 30px;
+    height: 100%; }
+  #content main.col-md-12 {
+    padding-left: 15px;
+    padding-right: 15px; }
+    #content main.col-md-12 article {
+      padding-left: 15px;
+      padding-right: 15px; }
+  #content article {
+    margin-bottom: 15px;
     padding: 0px;
-    padding-bottom: 15px;
     padding-top: 30px; }
-    #content article img {
-      border-radius: 8px; }
-    #content article > header {
-      background-color: #fff;
-      border-bottom: 0px solid #e9e9e9;
-      padding: 0;
-      padding-bottom: 0px; }
-      #content article > header h2 {
-        color: #454545;
-        font-family: Georgia;
-        margin-bottom: 10px;
-        margin-top: 0; }
-      #content article > header p {
-        color: #999;
-        font-family: Georgia;
-        font-size: 16px;
-        font-style: italic;
-        text-shadow: 0px 0px 0 #ccc; }
-    #content article img {
-      border: 2px solid #e5e5e5;
-      margin-bottom: 20px;
-      max-width: 100%; }
-    #content article .sm-thumbnail {
-      position: relative;
-      left: 0;
-      top: 0; }
-      #content article .sm-thumbnail img {
-        border-radius: 8px;
-        height: 60px;
-        margin-bottom: 0px;
-        margin-right: 15px;
-        width: 60px; }
+  #content article.blog img {
+    border-radius: 0; }
+  #content article.blog > header {
+    background-color: #fff;
+    border-bottom: 0px solid #e9e9e9;
+    margin-bottom: 15px;
+    padding: 0;
+    padding-bottom: 0px; }
+  #content article.blog img {
+    margin-bottom: 20px;
+    max-width: 100%; }
+  #content article.blog .sm-thumbnail {
+    position: relative;
+    left: 0;
+    top: 0; }
+    #content article.blog .sm-thumbnail img {
+      border-radius: 8px;
+      height: 60px;
+      margin-bottom: 0px;
+      margin-right: 15px;
+      width: 60px; }
+  #content article.portfolio a h2 {
+    margin-top: 15px; }
+  #content article.portfolio a img {
+    border: 2px solid #e5e5e5;
+    height: 350px;
+    max-width: 100%;
+    width: 100%; }
+  #content article.portfolio a:hover img {
+    opacity: 0.5; }
   #content .pagination {
     float: right; }
     #content .pagination .active {
@@ -212,19 +239,24 @@ p {
       border-color: #428bca; }
 
 #sidebar {
-  border-left: 2px solid #f5f5f5;
+  border-left: 2px solid #e5e5e5;
   display: table-cell;
+  float: none;
   height: 100%;
   padding-left: 30px;
   padding-right: 0;
-  padding: 15px;
-  padding-top: 30px; }
+  padding-top: 45px;
+  padding-bottom: 0;
+  vertical-align: top; }
   #sidebar > div {
-    border-radius: 5px;
-    padding: 15px; }
-  #sidebar h3 {
-    font-family: Georgia;
-    margin-top: 0; }
+    margin-bottom: 45px; }
+    #sidebar > div h3 {
+      font-family: Arial;
+      font-size: 22px;
+      font-weight: bold;
+      margin: 0;
+      margin-bottom: 10px;
+      line-height: 150%; }
   #sidebar img {
     border-radius: 8px; }
   #sidebar ul {
@@ -248,6 +280,7 @@ p {
   width: 100%; }
   #top-footer h3 {
     color: #fff;
+    font-family: arial;
     font-size: 30px;
     margin: 0px auto;
     margin-left: 15px;
@@ -256,6 +289,7 @@ p {
     text-transform: none; }
   #top-footer p {
     color: #fff;
+    font-family: arial;
     font-size: 14px;
     margin: 0px auto;
     text-align: center;
@@ -290,9 +324,6 @@ p {
     text-align: left; }
   #bottom-footer p {
     margin: 0; }
-
-.breadcrumb {
-  border: 1px solid #e5e5e5; }
 
 #searchform {
   background: -moz-linear-gradient(top, #ffd73a, orange);

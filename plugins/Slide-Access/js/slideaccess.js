@@ -295,7 +295,7 @@ $(document).ready(function () {
 				}
 				else if (sAccContent.eq(c2).hasClass("island-night") == true ) {
 					$("#header-description").removeClass();
-					$("#header-descriptiojjn").addClass('night');	
+					$("#header-description").addClass('night');	
 				}				
             }			
 
